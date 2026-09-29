@@ -10,4 +10,6 @@ ppc64_test.s test assembly file
 
 ### to test:
 
-caxx ppc64.axx ppc64_test.s -v
+```
+caxx ppc64le.axx ppc64_test.s -v -m 21 -o ppc64le_test.o
+```
