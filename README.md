@@ -11,5 +11,10 @@ ppc64_test.s test assembly file
 ### to test:
 
 ```
-caxx ppc64le.axx ppc64_test.s -v -m 21 -o ppc64le_test.o
-```
+caxx ppc64.axx ppc64_hello.s -o ppc64_hello.o
+ld.lld ppc64_hello.o -o ppc64_hello
+qemu-ppc64-static ./ppc64_hello              
+
+caxx ppc64.axx bf_ppc64.s -o bf_ppc64.o
+ld.lld bf_ppc64.o -o bf_ppc64
+qemu-ppc64-static ./bf_ppc64 ../mandelbrot.bf```
