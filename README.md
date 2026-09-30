@@ -11,9 +11,13 @@ ppc64_test.s test assembly file
 ### to test:
 
 ```
+# hello world
+
 caxx ppc64.axx ppc64_hello.s -o ppc64_hello.o
 ld.lld ppc64_hello.o -o ppc64_hello
 qemu-ppc64-static ./ppc64_hello              
+
+# brainf*ck interpreter demo
 
 caxx ppc64.axx bf_ppc64.s -o bf_ppc64.o
 ld.lld bf_ppc64.o -o bf_ppc64
